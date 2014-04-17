@@ -1,0 +1,54 @@
+body {
+    background: #cef;
+}
+a {
+        color: #009FDA;
+        text-decoration: none;
+}
+a:hover {
+        color: #00BAFF;
+}
+.page-header {
+    background: #009FDA;
+    color: #fff;
+    margin: 0;
+    padding: 50px 0 100px;
+    border: 0;
+}
+.container {
+    width: 650px;
+}
+.main {
+    margin: -50px auto 50px;
+    background: #fff;
+    border: 1px solid #9CF;
+}
+.media {
+    padding: 15px 0;
+    border-bottom: 1px solid #9CF;
+    margin: 0 auto;
+}
+.media-object {
+    border-radius: 50%;
+}
+.date {
+    color: #999;
+    float: right;
+}
+.glyphicon {
+    margin: 0 3px;
+}
+blockquote {
+    margin: 10px 0;
+    padding: 0 10px;
+    font-size: 1em;
+    opacity: .75;
+}
+.images {
+    margin-top: 10px;
+    overflow: hidden;
+    max-height: 200px;
+}
+.images img {
+    max-width: 100%;
+}

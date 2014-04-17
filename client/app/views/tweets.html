@@ -1,0 +1,49 @@
+<template name="tweets">
+    <!-- {{> loginButtons}} -->
+    <header class="page-header">
+        <hgroup class="container">
+            <h1>Recent Tech Tweets</h1>
+            <h2>Filtering out the noise</h2>
+        </hgroup>
+    </header>
+    <section class="container main">
+        {{#each tweets}}
+            <div class="media">
+                <a class="pull-left" href="http://twitter.com/{{user.screen_name}}" title="{{user.name}}">
+                    <img class="media-object" src="{{user.profile_image_url}}">
+                </a>
+                <div class="media-body">
+                    <div class="media-heading">
+                        {{#if retweeted_status}}
+                            <i class="glyphicon glyphicon-retweet"></i>
+                            <a href="http://twitter.com/{{user.screen_name}}">{{user.name}}</a> retweeted
+                        {{else}}
+                            <a href="http://twitter.com/{{user.screen_name}}">{{user.name}}</a>
+                        {{/if}}
+                        <span class="date">{{moments created_at}}</span>
+                    </div>
+                    <div class="summary">
+                        {{#if retweeted_status}}
+                            <blockquote>
+                                {{{linkify retweeted_status}}}
+                            </blockquote>
+                        {{else}}
+                            {{{linkify this}}}
+                        {{/if}}
+                    </div>
+                    {{#if entities.media}}
+                        <div class="images">
+                            {{#each entities.media}}
+                                {{#if isPhoto}}
+                                    <a href="{{expanded_url}}">
+                                        {{{thumb this}}}
+                                    </a>
+                                {{/if}}
+                            {{/each}}
+                        </div>
+                    {{/if}}
+                </div>
+            </div>
+        {{/each}}
+    </section>
+</template>

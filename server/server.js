@@ -1,5 +1,6 @@
 if (Meteor.isServer) {
     Meteor.startup(function() {
+        // quick fix to get around rate limit issue
         // save tweets to DB in case rate limit is reached
         SavedTweets = new Meteor.Collection('tweets');
         // connect the twitter api

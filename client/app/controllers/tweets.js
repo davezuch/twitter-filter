@@ -12,7 +12,7 @@ if (Meteor.isClient) {
         }
     }
 
-    twitStream = new Meteor.Stream('tweets')
+    twitStream = new Meteor.Stream('tweets');
 
     twitStream.emit('connect');
 

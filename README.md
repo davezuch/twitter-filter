@@ -1,6 +1,8 @@
 twitter-filter
 ==============
 
+Code is at a primitive, prototypal stage, far from a finished product.
+
 Filter out the noise and display only tech tweets.
 
 To get started, clone or download the repo, rename `twitter.example.json` inside `private` to `twitter.json` and enter your twitter keys and secrets, then launch your meteor app.

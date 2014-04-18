@@ -20,11 +20,13 @@ a:hover {
 }
 .main {
     margin: -50px auto 50px;
-    background: #fff;
+    background: #fff url(/images/loader-medium.gif) no-repeat 50% 50%;
     border: 1px solid #9CF;
+    min-height: 200px
 }
 .media {
     padding: 15px 0;
+    background: #fff;
     border-bottom: 1px solid #9CF;
     margin: 0 auto;
 }

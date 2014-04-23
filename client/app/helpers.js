@@ -18,7 +18,7 @@ Handlebars.registerHelper('linkify', function(tweet) {
                     tweetText = myUrl.display_url;
                 }
             }
-            return tweetText.link(url);
+            return link(tweetText, url);
         })
         .replace(/[#]+[A-Za-z0-9-_]+/g, function(hash) {
             var text = hash.replace('#', '');

@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
-    filter = new RegExp('code|html|js|javascript|ecma|css|compass|sass|node|npm|grunt|meteor|angular|dev|front.{0,1}end|browser|chrome|firefox|mozilla|google|apple|sdk|ios|android|responsive|spa', 'i');
+    filter = new RegExp('code|html|js|javascript|ecma|css|compass|sass|node|npm|grunt|meteor(?!s)|angular|dev|front.{0,1}end|browser|chrome|firefox|mozilla|google|apple|sdk|\bios|android|responsive|canvas|svg|png', 'i');
 
     filterTweet = function(tweet) {
         var str = tweet.text;
@@ -8,6 +8,7 @@ if (Meteor.isClient) {
         });
 
         if (str.match(filter)) {
+            console.log(str.match(filter));
             Tweets.insert(tweet);
         }
     }

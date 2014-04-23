@@ -1,6 +1,6 @@
-body {
+/*body {
     background: #cef;
-}
+}*/
 a {
         color: #009FDA;
         text-decoration: none;
@@ -9,26 +9,37 @@ a:hover {
         color: #00BAFF;
 }
 .page-header {
-    background: #009FDA;
-    color: #fff;
+    /*background: #009FDA;*/
+    /*color: #fff;*/
     margin: 0;
     padding: 50px 0 100px;
     border: 0;
+}
+h1 {
+    font-size: 106px;
+    font-weight: 200;
+}
+h2 {
+    margin-top: 0;
+    font-weight: 200;
+    text-align: right;
 }
 .container {
     width: 650px;
 }
 .main {
-    margin: -50px auto 50px;
+    margin: 0 auto 50px;
     background: #fff url(/images/loader-medium.gif) no-repeat 50% 50%;
-    border: 1px solid #9CF;
     min-height: 200px
 }
 .media {
     padding: 15px 0;
     background: #fff;
-    border-bottom: 1px solid #9CF;
+    border-bottom: 1px solid #666;
     margin: 0 auto;
+}
+.media:first-child {
+    border-top: 1px solid #666;
 }
 .media-object {
     border-radius: 50%;

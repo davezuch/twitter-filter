@@ -1,3 +1,7 @@
+function link(title, url) {
+    return title.link(url + '" target="_blank').replace(/\&quot\;/g, '"');
+}
+
 Handlebars.registerHelper('moments', function(date) {
     return moment(date).format('HH:mm:ss');
 });
@@ -18,11 +22,11 @@ Handlebars.registerHelper('linkify', function(tweet) {
         })
         .replace(/[#]+[A-Za-z0-9-_]+/g, function(hash) {
             var text = hash.replace('#', '');
-            return hash.link('http://twitter.com/search/%23' + text);
+            return link(hash, 'http://twitter.com/search/%23' + text);
         })
         .replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {
             var username = u.replace('@', '');
-            return u.link('http://twitter.com/' + username);
+            return link(u, 'http://twitter.com/' + username);
         });
 });
 
